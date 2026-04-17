@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>月等效業績試算器</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+  <div class="badge">URS CLINIC</div>
+  <h1>諮詢師績效試算系統</h1>
+  <p class="header-note">依月等效業績與職務配置進行試算</p>
+</div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>輸入資料</h2>
+
+        <label for="baseSalary">基本薪資</label>
+        <input id="baseSalary" type="number" value="29500" />
+
+        <label for="jobAllowance">職務相關報酬總額</label>
+        <input id="jobAllowance" type="number" value="12090" />
+
+        <label for="revenue">本月總業績</label>
+        <input id="revenue" type="number" value="500000" />
+
+        <label for="consultDays">諮詢天數</label>
+        <input id="consultDays" type="number" value="5" />
+
+        <label for="totalDays">總上班天數</label>
+        <input id="totalDays" type="number" value="20" />
+
+        <button id="calcBtn">開始試算</button>
+      </div>
+
+      <div class="card result-card">
+        <h2>試算結果</h2>
+
+        <div class="result-row">
+          <span class="label">原職務天數</span>
+          <span class="value" id="originalDays">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">月等效業績</span>
+          <span class="value" id="equivalentRevenue">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">適用抽成比例</span>
+          <span class="value" id="rate">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">職業適合度</span>
+          <span class="value" id="level">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">職務相關報酬實領</span>
+          <span class="value" id="actualAllowance">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">預估績效獎金</span>
+          <span class="value" id="bonus">-</span>
+        </div>
+
+        <div class="result-row total-row">
+          <span class="label">預估總收入</span>
+          <span class="value" id="totalIncome">-</span>
+        </div>
+
+        <div class="result-row diff-row">
+          <span class="label">與原職務模式差額</span>
+          <span class="value" id="difference">-</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
